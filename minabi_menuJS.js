@@ -1,4 +1,3 @@
-<script>
   const aboutButton = document.querySelector('.about-button');
   const actionsButton = document.querySelector('.actions-button');
   const partnersButton = document.querySelector('.partenaires-button');
@@ -121,4 +120,3 @@ partnersButton.addEventListener('click', function() {
     actionsCloses.click();
   }
 });
-</script>
