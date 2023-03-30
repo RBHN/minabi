@@ -16,6 +16,27 @@
   gsap.set(actionSection, { opacity: 0 });
   gsap.set(partnersSection, { opacity: 0 });
 
+const buttons = document.querySelectorAll('.my-button');
+let animationPlaying = false;
+
+buttons.forEach(function(button) {
+  button.addEventListener('click', function() {
+    if (!animationPlaying) {
+      animationPlaying = true;
+      buttons.forEach(function(button) {
+        button.disabled = true;
+      });
+      // do your animation here
+      setTimeout(function() {
+        buttons.forEach(function(button) {
+          button.disabled = false;
+        });
+        animationPlaying = false;
+      }, 1000); // delay for 1 second
+    }
+  });
+});
+
 //about section//
  aboutButton.addEventListener('click', function() {
   
