@@ -32,7 +32,7 @@ buttons.forEach(function(button) {
           button.disabled = false;
         });
         animationPlaying = false;
-      }, 1000); // delay for 1 second
+      }, 10000); // delay for 1 second
     }
   });
 });
