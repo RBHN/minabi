@@ -16,7 +16,7 @@
   gsap.set(actionSection, { opacity: 0 });
   gsap.set(partnersSection, { opacity: 0 });
 
-const buttons = document.querySelectorAll('.my-button');
+const buttons = document.querySelectorAll('.link-color');
 let animationPlaying = false;
 
 buttons.forEach(function(button) {
