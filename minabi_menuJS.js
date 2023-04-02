@@ -54,6 +54,7 @@
 
 //partners section
 partnersButton.addEventListener('click', function() {
+  return false;
   
   if (partnersSection.classList.contains('is-hidden') && sectionMenu.classList.contains('is-hidden')) {
     // Reveal the partnersSection
