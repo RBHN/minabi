@@ -11,12 +11,23 @@
   const actionsOpens = document.getElementById('actions-opens');
   const partnersOpens = document.getElementById('partners-opens');
   const partnersCloses = document.getElementById('partners-closes');
+  const body = document.querySelector('.body');
 
   gsap.set(aboutSection, { opacity: 0 });
   gsap.set(actionSection, { opacity: 0 });
   gsap.set(partnersSection, { opacity: 0 });
 
-//about section
+// Disable background scrolling when menu is opened
+sectionMenu.addEventListener('transitionend', () => {
+  if (!sectionMenu.classList.contains('is-hidden')) {
+    body.classList.add('overflow-hidden');
+  } else {
+    body.classList.remove('overflow-hidden');
+  }
+});
+
+
+// About section
  aboutButton.addEventListener('click', function() {
   
   if (aboutSection.classList.contains('is-hidden') && sectionMenu.classList.contains('is-hidden')) {
@@ -51,7 +62,7 @@
   }
 });
 
-//partners section
+// Partners section
 partnersButton.addEventListener('click', function() {
   
   if (partnersSection.classList.contains('is-hidden') && sectionMenu.classList.contains('is-hidden')) {
@@ -86,7 +97,7 @@ partnersButton.addEventListener('click', function() {
   }
 });
 
-//actions section
+// Actions section
    actionsButton.addEventListener('click', function() {
   
   if (actionSection.classList.contains('is-hidden') && sectionMenu.classList.contains('is-hidden')) {
