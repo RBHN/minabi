@@ -39,6 +39,7 @@ buttons.forEach(function(button) {
 
 //about section//
  aboutButton.addEventListener('click', function() {
+   event.preventDefault();
   
   if (aboutSection.classList.contains('is-hidden') && sectionMenu.classList.contains('is-hidden')) {
     // Reveal the section
