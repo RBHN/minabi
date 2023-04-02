@@ -16,28 +16,7 @@
   gsap.set(actionSection, { opacity: 0 });
   gsap.set(partnersSection, { opacity: 0 });
 
-const buttons = document.querySelectorAll('.link-color');
-let animationPlaying = false;
-
-buttons.forEach(function(button) {
-  button.addEventListener('click', function() {
-    if (!animationPlaying) {
-      animationPlaying = true;
-      buttons.forEach(function(button) {
-        button.disabled = true;
-      });
-      // do your animation here
-      setTimeout(function() {
-        buttons.forEach(function(button) {
-          button.disabled = false;
-        });
-        animationPlaying = false;
-      }, 10000); // delay for 1 second
-    }
-  });
-});
-
-//about section//
+//about section
  aboutButton.addEventListener('click', function() {
    event.preventDefault();
   
@@ -73,7 +52,7 @@ buttons.forEach(function(button) {
   }
 });
 
-//partners section//
+//partners section
 partnersButton.addEventListener('click', function() {
   
   if (partnersSection.classList.contains('is-hidden') && sectionMenu.classList.contains('is-hidden')) {
@@ -108,7 +87,7 @@ partnersButton.addEventListener('click', function() {
   }
 });
 
-//actions section//
+//actions section
    actionsButton.addEventListener('click', function() {
   
   if (actionSection.classList.contains('is-hidden') && sectionMenu.classList.contains('is-hidden')) {
