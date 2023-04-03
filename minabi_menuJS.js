@@ -18,7 +18,7 @@
   gsap.set(partnersSection, { opacity: 0 });
 
 // Disable background scrolling when menu is opened
-sectionMenu.addEventListener('transitionend', () => {
+sectionMenu.addEventListener('animationend', () => {
   if (!sectionMenu.classList.contains('is-hidden')) {
     body.classList.add('overflow-hidden');
   } else {
