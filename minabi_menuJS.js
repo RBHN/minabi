@@ -18,14 +18,13 @@
   gsap.set(partnersSection, { opacity: 0 });
 
 // Disable background scrolling when menu is opened
-sectionMenu.addEventListener('animationend', () => {
+const handleBodyOverflow = () => {
   if (!sectionMenu.classList.contains('is-hidden')) {
     body.classList.add('overflow-hidden');
   } else {
     body.classList.remove('overflow-hidden');
   }
-});
-
+};
 
 // About section
  aboutButton.addEventListener('click', function() {
@@ -60,6 +59,8 @@ sectionMenu.addEventListener('animationend', () => {
     sectionMenu.classList.add('is-hidden');
     aboutCloses.click();
   }
+   
+   handleBodyOverflow();
 });
 
 // Partners section
