@@ -96,6 +96,8 @@ partnersButton.addEventListener('click', function() {
     sectionMenu.classList.add('is-hidden');
     partnersCloses.click();
   }
+  
+  handleBodyOverflow();
 });
 
 // Actions section
@@ -131,4 +133,6 @@ partnersButton.addEventListener('click', function() {
     sectionMenu.classList.add('is-hidden');
     actionsCloses.click();
   }
+     
+     handleBodyOverflow();
 });
